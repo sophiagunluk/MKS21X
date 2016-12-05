@@ -1,4 +1,0 @@
-clone - to initially get the github repo on your computer
-pull - to update the files from github onto your computer
-push - to update the file locally, without deleting the old version
-commit - to update the file everywhere and delete all previous versions
