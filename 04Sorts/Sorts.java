@@ -9,12 +9,10 @@ public class Sorts{
 
     public Sorts(int[] d){
 	data = d;
-	selectionSort(data);
+	//selectionSort(data);
+	insertionSort(data);
     }
-  /**Selection sort of an int array. 
-  *Upon completion, the elements of the array will be in increasing order.
-  *@param data  the elements to be sorted.
-  */
+  
     public static void selectionSort(int[] data){
     	for (int i = 0; i < data.length-1; i++){
     	    int current = i;
@@ -26,6 +24,19 @@ public class Sorts{
             data[current] = data[i];
             data[i] = a;
     	}
+    }
+
+    public static void insertionSort(int[] data){
+    	for (int i = 0; i < data.length; i++){
+    		int pp = 0;
+			for (int j = 0; j < i; j++){
+		   		if (data[i] < data[j]){
+					int a = data[i];
+            		data[i] = data[j];
+            		data[j] = a;
+		    	}
+			}
+		}
     }
 
     public String toString(){
@@ -40,7 +51,7 @@ public class Sorts{
     public static void main(String[] arrgg){
 	int[] tester = {64, 25, 12, 22, 11};
 	Sorts test1 = new Sorts(tester);
-	//System.out.println(test1);
+	System.out.println(test1);
     }
 	
 }
